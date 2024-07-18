@@ -16,6 +16,10 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <section class="main-body">
@@ -30,7 +34,37 @@
           <button class="default-button">Скачать приложение</button>
         </div>
       </div>
-      <div class="benefits-div">
+      <div>
+        <swiper-container
+          class="benefits-slider"
+          pagination="true"
+          pagination-clickable="true"
+          grid-rows="1"
+          space-between="20"
+          loop="true"
+          ,
+        >
+          <swiper-slide
+            ><p>
+              Упрощает процесс подачи <br />
+              и работы с обращениями
+            </p></swiper-slide
+          >
+          <swiper-slide
+            ><p>
+              Обращения становятся <br />
+              публичными
+            </p></swiper-slide
+          >
+          <swiper-slide
+            ><p>
+              Формирует честный <br />
+              и прозрачный рейтинг ВУЗов
+            </p></swiper-slide
+          >
+        </swiper-container>
+      </div>
+      <!-- <div class="benefits-div">
         <div class="benefits-block-1">
           <p>
             Упрощает процесс подачи <br />
@@ -49,8 +83,69 @@
             и прозрачный рейтинг ВУЗов
           </p>
         </div>
-      </div>
+      </div> -->
       <div class="info-div">
+        <div class="info-block-1">
+          <div class="swiper mySwiper4">
+            <div class="swiper-wrapper">
+              <div
+                class="swiper-slide"
+                style="background-image: url('./media/images/books.jpg')"
+              >
+                <div class="info-block-1-text-div">
+                  <p class="info-block-1-text-header">
+                    Studentsays
+                    <span style="font-weight: bold">для студентов</span>
+                  </p>
+                  <p>
+                    Улучшайте качество вашего образовательного процесса <br />
+                    быстро и эффективно: оставляйте обращения и следите <br />
+                    за решением проблем в вашем ВУЗе онлайн
+                  </p>
+                </div>
+              </div>
+              <div
+                class="swiper-slide"
+                style="background-image: url('./media/images/notebook.jpg')"
+              >
+                <div class="info-block-1-text-div">
+                  <p class="info-block-1-text-header">
+                    Studentsays
+                    <span style="font-weight: bold"> для ВУЗов</span>
+                  </p>
+                  <p>
+                    Отслеживайте эффективность образовательных и <br />
+                    организационных процессов, взаимодействуйте со <br />
+                    студентами и оптимизируйте сбор отзывов
+                  </p>
+                </div>
+              </div>
+              <div
+                class="swiper-slide"
+                style="background-image: url('./media/images/writing.jpg')"
+              >
+                <div class="info-block-1-text-div">
+                  <p class="info-block-1-text-header">
+                    Studentsays
+                    <span style="font-weight: bold">для абитуриентов</span>
+                  </p>
+                  <p>
+                    Изучите рейтинг ВУЗов, ознакомьтесь с отзывами студентов,
+                    <br />
+                    посмотрите, насколько активно представители ВУЗа решают
+                    <br />
+                    проблемы и отвечают на отзывы
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="info-block-2">
+          <button class="default-button">Рейтинг ВУЗов</button>
+        </div>
+      </div>
+      <!-- <div class="info-div">
         <div class="info-block-1">
           <div class="info-block-1-text-div">
             <p class="info-block-1-text-header">
@@ -66,7 +161,7 @@
         <div class="info-block-2">
           <button class="default-button">Рейтинг ВУЗов</button>
         </div>
-      </div>
+      </div> -->
       <div class="more-div">
         <div class="more-block">
           <p>
@@ -78,7 +173,7 @@
       <div class="about-div">
         <h1 class="about-header">Что такое Studentsays?</h1>
 
-        <img
+        <!-- <img
           class="about-img-clip"
           src="./media/images/3d_clip.png"
           alt="3d_clip"
@@ -88,7 +183,7 @@
           class="about-img-comment"
           src="./media/images/3d_comment.png"
           alt="3d_comment"
-        />
+        /> -->
 
         <p class="about-text">
           Даже в небольших образовательных учреждениях существуют проблемы с
@@ -186,4 +281,43 @@
       </div>
     </div>
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    var swiper4 = new Swiper(".mySwiper4", {
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      grabCursor: true,
+      effect: "creative",
+      loop: true,
+      creativeEffect: {
+        prev: {
+          translate: ["-20%", 0, -1],
+        },
+        next: {
+          translate: ["100%", 0, 0],
+        },
+      },
+    });
+
+    var swiper = new Swiper(".benefits-slider", {
+      loop: true,
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 5,
+          spaceBetween: 50,
+        },
+      },
+    });
+  </script>
 </html>
