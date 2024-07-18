@@ -85,7 +85,7 @@
   grid-template-rows: 1fr;
   grid-column-gap: 1.5rem;
   grid-row-gap: 0px;
-  margin: 1.5rem 0;
+  margin-bottom: 2rem;
 }
 
 .info-block-1 {
@@ -102,7 +102,7 @@
 .info-block-1-text-div {
   position: absolute;
   bottom: 0;
-  margin: 1rem;
+  margin: 1.5rem;
   color: white;
   font-weight: 500;
 }
@@ -147,9 +147,8 @@
 }
 
 .more-block p {
-  position: absolute;
-  bottom: 0;
-  margin: 1rem;
+  /* bottom: 0; */
+  margin: 1.5rem;
   font-size: 1.5rem;
   font-weight: 500;
 }
@@ -157,8 +156,7 @@
 .more-block button {
   position: absolute;
   bottom: 0;
-  right: 0;
-  margin: 0 4.5rem 2rem 0;
+  margin: 1.5rem;
 }
 
 .about-header,
@@ -177,7 +175,6 @@
   font-weight: 500;
   font-size: 2.25rem;
   margin-bottom: 2rem;
-  line-height: 2.5rem;
 }
 
 .about-img-clip {
@@ -229,6 +226,21 @@
 .how-to-step-4 {
   grid-area: 2 / 2 / 3 / 3;
   display: flex;
+}
+
+.how-to-step-1,
+.how-to-step-2,
+.how-to-step-3,
+.how-to-step-4 {
+  position: relative;
+}
+
+.step-img {
+  display: none;
+  position: absolute;
+  left: 30%;
+  margin-top: -0.25rem;
+  opacity: 0.3;
 }
 
 .step-number {
@@ -298,7 +310,6 @@
 .footer-box {
   max-width: 1280px;
   margin: 0 auto;
-  height: 200px;
   padding-left: 3rem;
 }
 
@@ -307,9 +318,6 @@
   font-weight: 500;
   font-size: 3rem;
   padding-top: 2rem;
-}
-
-swiper-container {
 }
 
 .benefits-slider swiper-slide {
@@ -325,12 +333,12 @@ swiper-container {
   position: absolute;
   bottom: 0;
   left: 0;
-  margin: 1rem;
+  margin: 1.5rem;
   font-weight: 500;
   font-size: 1.25rem;
 }
 
-.swiper-slide {
+.swiper-slide-img {
   /* background-image: url("../images/info-background.png"); */
   background-size: cover;
   background-repeat: no-repeat;
@@ -341,8 +349,161 @@ swiper-container {
   position: relative;
 }
 
-.swiper {
+.mySwiper4 {
   width: auto;
   height: 250px;
   border-radius: 1rem;
+}
+
+.footer-box-text {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.footer-box-text a {
+  color: #ededed;
+  text-decoration: none;
+}
+
+.designer-credits {
+  color: #a7a4a4;
+  text-align: center;
+  padding: 3rem 0 1rem 0;
+}
+
+.footer-icon {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #cc2222 !important;
+}
+
+.swiper-slide-logo {
+  margin-top: 7rem;
+}
+
+.swiper-slide-logo img {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .info-block-2 {
+    display: none;
+  }
+  .info-block-1 {
+    grid-area: 1 / 1 / 2 / 5;
+  }
+
+  .about-header,
+  .how-header {
+    font-size: 3rem;
+  }
+
+  .about-text {
+    font-size: 1.5rem;
+  }
+
+  .step-text {
+    font-size: 1rem;
+  }
+
+  .step-number {
+    font-size: 1.5rem;
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+
+  .how-to-important-img {
+    width: 8rem;
+    height: 8rem;
+    margin-top: 0.5rem;
+  }
+
+  .footer-header {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .benefits-slider swiper-slide {
+    margin-top: 2rem;
+  }
+
+  .step-img {
+    display: block;
+    height: 3rem;
+  }
+
+  .main-body {
+    padding: 1.5rem;
+  }
+
+  .footer-box {
+    padding-left: 1.5rem;
+  }
+
+  .benefits-slider swiper-slide p,
+  .more-block p,
+  .info-block-1-text-header {
+    font-size: 1rem;
+  }
+
+  .header-text {
+    font-size: 2.25rem;
+  }
+
+  .info-block-1-text-description {
+    font-size: 0.75rem;
+  }
+
+  .about-header,
+  .how-header {
+    font-size: 2rem;
+    margin: 2rem 0 2rem 0;
+  }
+
+  .about-text {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .step-text {
+    font-size: 0.75rem;
+  }
+
+  .step-number {
+    font-size: 1rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: 0.5rem;
+  }
+
+  .how-to-important-text {
+    font-size: 1rem;
+  }
+
+  .step-number {
+    display: none;
+  }
+}
+
+@media (max-width: 320px) {
+  .header-text {
+    font-size: 1.75rem;
+  }
+
+  .step-img {
+    left: 25%;
+    margin-top: 0rem;
+  }
+
+  .how-to-important-img {
+    margin: 1.5rem 0 0 -1.75rem;
+    width: 5rem;
+    height: 5rem;
+  }
 }

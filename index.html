@@ -37,12 +37,22 @@
       <div>
         <swiper-container
           class="benefits-slider"
-          pagination="true"
-          pagination-clickable="true"
           grid-rows="1"
+          autoplay="true"
+          autoplay-delay="2500"
           space-between="20"
           loop="true"
-          ,
+          breakpoints='{
+            "425": {
+              "slidesPerView": 1
+            },
+            "768": {
+              "slidesPerView": 2
+            },
+            "1024": {
+              "slidesPerView": 3
+            }
+          }'
         >
           <swiper-slide
             ><p>
@@ -64,32 +74,12 @@
           >
         </swiper-container>
       </div>
-      <!-- <div class="benefits-div">
-        <div class="benefits-block-1">
-          <p>
-            Упрощает процесс подачи <br />
-            и работы с обращениями
-          </p>
-        </div>
-        <div class="benefits-block-2">
-          <p>
-            Обращения становятся <br />
-            публичными
-          </p>
-        </div>
-        <div class="benefits-block-3">
-          <p>
-            Формирует честный <br />
-            и прозрачный рейтинг ВУЗов
-          </p>
-        </div>
-      </div> -->
       <div class="info-div">
         <div class="info-block-1">
           <div class="swiper mySwiper4">
             <div class="swiper-wrapper">
               <div
-                class="swiper-slide"
+                class="swiper-slide swiper-slide-img"
                 style="background-image: url('./media/images/books.jpg')"
               >
                 <div class="info-block-1-text-div">
@@ -97,7 +87,7 @@
                     Studentsays
                     <span style="font-weight: bold">для студентов</span>
                   </p>
-                  <p>
+                  <p class="info-block-1-text-description">
                     Улучшайте качество вашего образовательного процесса <br />
                     быстро и эффективно: оставляйте обращения и следите <br />
                     за решением проблем в вашем ВУЗе онлайн
@@ -105,7 +95,7 @@
                 </div>
               </div>
               <div
-                class="swiper-slide"
+                class="swiper-slide swiper-slide-img"
                 style="background-image: url('./media/images/notebook.jpg')"
               >
                 <div class="info-block-1-text-div">
@@ -113,7 +103,7 @@
                     Studentsays
                     <span style="font-weight: bold"> для ВУЗов</span>
                   </p>
-                  <p>
+                  <p class="info-block-1-text-description">
                     Отслеживайте эффективность образовательных и <br />
                     организационных процессов, взаимодействуйте со <br />
                     студентами и оптимизируйте сбор отзывов
@@ -121,7 +111,7 @@
                 </div>
               </div>
               <div
-                class="swiper-slide"
+                class="swiper-slide swiper-slide-img"
                 style="background-image: url('./media/images/writing.jpg')"
               >
                 <div class="info-block-1-text-div">
@@ -129,7 +119,7 @@
                     Studentsays
                     <span style="font-weight: bold">для абитуриентов</span>
                   </p>
-                  <p>
+                  <p class="info-block-1-text-description">
                     Изучите рейтинг ВУЗов, ознакомьтесь с отзывами студентов,
                     <br />
                     посмотрите, насколько активно представители ВУЗа решают
@@ -138,6 +128,7 @@
                   </p>
                 </div>
               </div>
+              <div class="swiper-pagination"></div>
             </div>
           </div>
         </div>
@@ -145,23 +136,7 @@
           <button class="default-button">Рейтинг ВУЗов</button>
         </div>
       </div>
-      <!-- <div class="info-div">
-        <div class="info-block-1">
-          <div class="info-block-1-text-div">
-            <p class="info-block-1-text-header">
-              Studentsays <span style="font-weight: bold">для студентов</span>
-            </p>
-            <p>
-              Улучшайте качество вашего образовательного процесса <br />
-              быстро и эффективно: оставляйте обращения и следите <br />
-              за решением проблем в вашем ВУЗе онлайн
-            </p>
-          </div>
-        </div>
-        <div class="info-block-2">
-          <button class="default-button">Рейтинг ВУЗов</button>
-        </div>
-      </div> -->
+
       <div class="more-div">
         <div class="more-block">
           <p>
@@ -208,6 +183,7 @@
         /> -->
         <div class="how-to-steps-div">
           <div class="how-to-step-1">
+            <img class="step-img" src="./media/images/step1.png" alt="step-1" />
             <p class="step-number">1</p>
             <p class="step-text">
               Мы подключаем ВУЗ и всех <br />
@@ -215,6 +191,7 @@
             </p>
           </div>
           <div class="how-to-step-2">
+            <img class="step-img" src="./media/images/step3.png" alt="step-3" />
             <p class="step-number">3</p>
             <p class="step-text">
               Обращения проходят <br />
@@ -222,6 +199,7 @@
             </p>
           </div>
           <div class="how-to-step-3">
+            <img class="step-img" src="./media/images/step2.png" alt="step-2" />
             <p class="step-number">2</p>
             <p class="step-text">
               Студенты оставляют <br />
@@ -229,6 +207,7 @@
             </p>
           </div>
           <div class="how-to-step-4">
+            <img class="step-img" src="./media/images/step4.png" alt="step-4" />
             <p class="step-number">4</p>
             <p class="step-text">
               Представители ВУЗа <br />
@@ -252,42 +231,109 @@
           </div>
         </div>
       </div>
-      <div class="achievements-div">
-        <div class="achievements-block-1">
-          <img src="./media/images/itplanet.png" alt="ITПЛАНЕТА" />
-        </div>
-        <div class="achievements-block-2">
-          <img
-            src="./media/images/mic.png"
-            alt="Московский Иновационный Кластер"
-          />
-        </div>
-        <div class="achievements-block-3">
-          <img
-            src="./media/images/fasie.png"
-            alt="Фонд Содействия Инновациям"
-          />
-        </div>
-        <div class="achievements-block-4">
-          <img src="./media/images/novator.png" alt="Новатор Москвы" />
+      <div class="">
+        <div class="swiper logoSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="swiper-slide-logo">
+                <img src="./media/images/itplanet.png" alt="ITПЛАНЕТА" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-slide-logo">
+                <img
+                  src="./media/images/mic.png"
+                  alt="Московский Иновационный Кластер"
+                />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-slide-logo">
+                <img
+                  src="./media/images/fasie.png"
+                  alt="Фонд Содействия Инновациям"
+                />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-slide-logo">
+                <img src="./media/images/novator.png" alt="Новатор Москвы" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-slide-logo">
+                <img
+                  src="./media/images/ideas.png"
+                  alt="Cильные Идеи Для Нового Времени"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
     <div class="footer">
       <div class="footer-box">
-        <div>
+        <!-- <div>
           <p class="footer-header">Контакты</p>
+        </div>
+        <div class="footer-box-text">
+          <p>
+            <img src="./media/images/email.svg" alt="email"  class="footer-icon" />
+            <a href="mailto:contact@studentsays.ru"
+              >email: contact@studentsays.ru</a
+            >
+          </p>
+        </div>
+        <div class="footer-box-text">
+          <img src="./media/images/telegram.svg" alt="telegram" class="footer-icon" />
+            <a href="https://t.me/StudentSays_bot"
+              >telegram: @StudentSays_bot</a
+            >
+          </p>
+        </div> -->
+        <div class="designer-credits">
+          <p>designed by Liza Nepomnyashaya</p>
         </div>
       </div>
     </div>
   </body>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
   <script>
-    var swiper4 = new Swiper(".mySwiper4", {
+    var swiper = new Swiper(".logoSwiper", {
+      loop: true,
       autoplay: {
         delay: 2500,
         disableOnInteraction: false,
+      },
+      slidesPerView: 1,
+      grid: {
+        rows: 1,
+      },
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        425: {
+          slidesPerView: 2,
+        },
+        768: {
+          slidesPerView: 3,
+        },
+        1024: {
+          slidesPerView: 4,
+        },
+      },
+    });
+
+    var swiper4 = new Swiper(".mySwiper4", {
+      pagination: {
+        el: ".swiper-pagination",
       },
       grabCursor: true,
       effect: "creative",
@@ -298,24 +344,6 @@
         },
         next: {
           translate: ["100%", 0, 0],
-        },
-      },
-    });
-
-    var swiper = new Swiper(".benefits-slider", {
-      loop: true,
-      breakpoints: {
-        640: {
-          slidesPerView: 2,
-          spaceBetween: 20,
-        },
-        768: {
-          slidesPerView: 4,
-          spaceBetween: 40,
-        },
-        1024: {
-          slidesPerView: 5,
-          spaceBetween: 50,
         },
       },
     });
