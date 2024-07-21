@@ -31,7 +31,7 @@
           </p>
         </div>
         <div class="display-center">
-          <button class="default-button">Скачать приложение</button>
+          <button class="default-button">Вход и регистрация</button>
         </div>
       </div>
       <div>
@@ -55,18 +55,23 @@
           }'
         >
           <swiper-slide
+            style="
+              background-image: url('./media/images/comment\ and\ clip.png');
+            "
             ><p>
               Упрощает процесс подачи <br />
               и работы с обращениями
             </p></swiper-slide
           >
           <swiper-slide
+            style="background-image: url('./media/images/link\ and\ fire.png')"
             ><p>
               Обращения становятся <br />
               публичными
             </p></swiper-slide
           >
           <swiper-slide
+            style="background-image: url('./media/images/stars.png')"
             ><p>
               Формирует честный <br />
               и прозрачный рейтинг ВУЗов
@@ -142,7 +147,7 @@
           <p>
             Узнайте больше о том, как подключить <br />свой ВУЗ к Studentsays
           </p>
-          <button class="default-button">Скачать презентацию</button>
+          <!-- <button class="default-button">Скачать презентацию</button> -->
         </div>
       </div>
       <div class="about-div">
@@ -334,6 +339,7 @@
     var swiper4 = new Swiper(".mySwiper4", {
       pagination: {
         el: ".swiper-pagination",
+        clickable: true,
       },
       grabCursor: true,
       effect: "creative",

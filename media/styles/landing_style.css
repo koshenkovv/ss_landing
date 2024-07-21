@@ -121,6 +121,9 @@
   position: relative;
   display: flex;
   justify-content: center;
+  background-image: url("../images/rating.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .info-block-2 button {
@@ -144,6 +147,10 @@
   height: 250px;
   border-radius: 1rem;
   position: relative;
+  background-image: url("../images/fire\ and\ settings.png");
+  background-position: right;
+  background-size: 19rem;
+  background-repeat: no-repeat;
 }
 
 .more-block p {
@@ -327,6 +334,8 @@
   border-radius: 1rem;
   position: relative;
   margin: 7rem 0 2rem 0;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .benefits-slider swiper-slide p {
